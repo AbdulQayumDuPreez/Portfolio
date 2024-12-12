@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ6H3P6t8Pdt2H2p0A2IQI1q9uP56g5so1K5q1YPHOkVFmP2Z5wZGEdQ80ek" crossorigin="anonymous">
+
+    <!-- Optional: FontAwesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+       
+
+        /* Parallax Effect */
+        .parallax {
+            background-image: url('https://via.placeholder.com/1500x600'); /* Your background image */
+            height: 100vh;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .parallax-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        /* Project Grid */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-card .card-body {
+            padding: 15px;
+        }
+
+        /* Carousel Styling */
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #6c757d;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #343a40;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .parallax-content {
+                font-size: 2rem;
+            }
+
+            .project-card img {
+                height: 200px;
+            }
+
+            .carousel-item img {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar (Sticky) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Parallax Section -->
+    <section id="home" class="parallax">
+        <div class="parallax-content">
+            <h1>Welcome to My Creative World</h1>
+            <p>Explore my work and passion for design, development, and creativity.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container py-5">
+        <h2 class="text-center mb-5">My Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Branding Project</h5>
+                        <p class="card-text">A rebranding project that helped redefine the visual identity of a local business.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Website Redesign</h5>
+                        <p class="card-text">A complete overhaul of a website for better usability and modern design.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card project-card">
+                    <img src="https://via.placeholder.com/500x300" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobile App Design</h5>
+                        <p class="card-text">A mobile app design that focuses on user interaction and seamless functionality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Carousel Section -->
+    <section id="carouselSection" class="container py-5">
+        <h2 class="text-center mb-5">Featured Project Gallery</h2>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/1200x600" class="d-block w-100" alt="Carousel Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x600" class="d-block w-100" alt="Carousel Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x600" class="d-block w-100" alt="Carousel Image 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>&copy; 2024 My Portfolio | Designed with passion</p>
+        <div>
+            <a href="#">LinkedIn</a> |
+            <a href="#">GitHub</a> |
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybU7vsB2u12g9l7xS8gDk8l1Kb3uBjsDeJ6gD5wL9LlyF0Xk7x" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0fM3bbIb2y4p5Fh5J6y8tRj8RZCk5v3HRz1hxXjwH8xDmnM1" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
